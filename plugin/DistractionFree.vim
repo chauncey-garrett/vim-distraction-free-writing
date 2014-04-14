@@ -1,6 +1,6 @@
 " DistrationFree.vim  -- Toggle distraction free writing mode
-" Author:     Lakshan Perera (lakshan AT web2media net) 
-" URL:         https://github.com/laktek/distraction-free-writing-vim 
+" Author:     Lakshan Perera (lakshan AT web2media net)
+" URL:         https://github.com/laktek/distraction-free-writing-vim
 "
 " Usage:
 "
@@ -9,9 +9,9 @@
 " In .vimrc, specify the colorschemes and fonts to use
 " in fullscreen mode and normal mode.
 "
-" g:fullscreen_colorscheme - colorscheme to use in fullscreen mode 
-" g:fullscreen_font font to use in fullscreen mode 
-" g:normal_colorscheme - colorscheme to use in normal mode 
+" g:fullscreen_colorscheme - colorscheme to use in fullscreen mode
+" g:fullscreen_font font to use in fullscreen mode
+" g:normal_colorscheme - colorscheme to use in normal mode
 " g:normal_font - font to use in normal mode
 " eg: let g:fullscreen_colorscheme = "iawriter"
 "
@@ -62,7 +62,7 @@ function! ToggleDistractionFreeWriting()
 		exec "set linespace=".s:prev_linespace
 		exec "set laststatus=".s:prev_laststatus
 		exec "set guioptions+=r"
- 
+
 		set noruler!
     if has("gui_macvim")
 		  exec "set fuoptions=".s:prev_fuoptions
@@ -89,7 +89,7 @@ function! ToggleDistractionFreeWriting()
 		let s:prev_laststatus = &laststatus
 		let s:prev_font = &gfn
 
-		call DistractionFreeWriting()	
+		call DistractionFreeWriting()
 	endif
 endfunction
 
@@ -107,7 +107,7 @@ endif
 
 if !exists('g:normal_colorscheme')
   if has("gui_macvim")
-    let g:normal_colorscheme = "codeschool"
+    let g:normal_colorscheme = "solarized"
   else
     let g:normal_colorscheme = g:colors_name
   end
@@ -115,7 +115,7 @@ endif
 
 if !exists('g:normal_font')
   if has("gui_macvim")
-    let g:normal_font="Inconsolata:h14"
+    let g:normal_font="Essential PragmataPro:h16"
   else
     let g:normal_font=&guifont
   endif
